@@ -1,1 +1,31 @@
-PULSE
+<style type="text/css">
+.chart {
+        width: 100%;
+        height: 250px;
+}
+.chart2 {
+        width: 100%;
+        height: 750px;
+}
+
+</style>
+
+<div class="col-xs-12" ng-controller="PulseController">
+
+<div 
+	data-ac-chart="'bar'" 
+	data-ac-data="data" 
+	data-ac-config="config"
+	class="chart center-block">
+</div>
+<div class="col-xs-12" ng-show="message">
+<div class="alert" role="alert" ng-class="{'alert-success':grade == 'A','alert-warning':grade == 'B','alert-danger':grade == 'C'}">{{message}}</div>
+</div>
+<div 
+	data-ac-chart="'line'" 
+	data-ac-data="data2" 
+	data-ac-config="config"
+	class="chart2 center-block">
+</div>
+
+</div>
